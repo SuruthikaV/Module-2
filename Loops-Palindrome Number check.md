@@ -17,22 +17,22 @@ To write a Python program that checks whether a given number is a **palindrome**
 
 ## 🧾 Program
 ```
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
-def combination(n, k):
-    return factorial(n) // (factorial(k) * factorial(n - k))
-num_rows = int(input("Enter number of rows: "))
-for i in range(num_rows):
-    print(' ' * (num_rows - i - 1), end='')
-    for j in range(i + 1):
-        print(combination(i, j), end=' ')
-    print()
+num=int(input()) 
 
+rev=0 
+
+temp=num 
+
+while temp>0: 
+    rev=(10*rev)+temp%10 
+    temp//=10 
+    if rev==num: 
+        print("The given number {} is a Palindrome".format(num)) 
+    else: 
+        print("The given number {} is not a palindrome".format(num))
 ```
 ## Output
-<img width="201" height="225" alt="image" src="https://github.com/user-attachments/assets/4d151a94-914c-4bbc-bf28-f78ae8234539" />
+<img width="593" height="114" alt="image" src="https://github.com/user-attachments/assets/f60032d7-054c-491d-afa2-7c1dd1ab3855" />
 
 ## Result
 Thus, the program has been successfully executed
